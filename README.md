@@ -1,74 +1,86 @@
-# TOPSIS Assignment
+# Topsis-Anshika-102303042
 
-## Objective
-This assignment implements the **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)**
+## Overview
+This package implements the **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)**
 method using Python.
 
-The goal of TOPSIS is to rank multiple alternatives based on different criteria and their importance.
+TOPSIS is a multi-criteria decision-making technique used to rank alternatives based on their
+distance from an ideal best and an ideal worst solution.
+
+This package can be used directly from the **command line** after installation.
 
 ---
 
-## What is TOPSIS?
-TOPSIS is a multi-criteria decision-making method.
-It selects the best alternative by comparing the distance of each option from:
-- An **ideal best solution**
-- An **ideal worst solution**
-
-The alternative closest to the ideal best and farthest from the ideal worst gets the highest rank.
+## Package Name
+TOPSIS-ANSHIKA-102303042
 
 ---
 
-## Methodology (Steps)
-
-1. Read the input data from a CSV file  
-2. Assign weights to each criterion  
-3. Define impact of each criterion (`+` for benefit, `-` for cost)  
-4. Normalize the data  
-5. Multiply normalized values with weights  
-6. Determine ideal best and ideal worst values  
-7. Calculate distance from ideal best and worst  
-8. Compute TOPSIS score  
-9. Rank alternatives based on the score  
+## Installation
+Install the package from PyPI using pip:
+pip install TOPSIS-ANSHIKA-102303042
 
 ---
 
-## Input File
-- First column: Alternative names
-- Remaining columns: Numerical criteria values
+## Usage (Command Line)
+topsis <InputDataFile> <Weights> <Impacts> <OutputResultFile>
 
 ---
 
-## Output File
-The output CSV file contains:
-- **Topsis Score** – performance score of each alternative
-- **Rank** – ranking based on the TOPSIS score
-
-Higher score means better rank.
+### Example
+topsis data.csv "1,1,1,2" "+,+,-,+" result.csv
 
 ---
 
-## Result Table
-The result table shows all alternatives along with their TOPSIS score and rank.
+## 📥 Input File Format
+- The input file must be in **CSV format**
+- The **first column** should contain names of alternatives
+- Remaining columns should contain **numeric values only**
+- Minimum **3 columns** are required
 
-This helps in selecting the best alternative easily.
-
----
-
-## Result Graph
-A bar graph is used to visualize the TOPSIS scores of all alternatives.
-This provides a clear comparison between different options.
-
----
-
-## Tools Used
-- Python
-- Pandas
-- NumPy
-- Google Colab
-- GitHub
+### Sample Input
+Fund Name,P1,P2,P3,P4
+M1,0.67,0.45,6.5,42.6
+M2,0.60,0.36,3.6,53.3
+M3,0.82,0.67,3.8,63.1
 
 ---
 
-## Conclusion
-TOPSIS is an effective and simple method for ranking alternatives using multiple criteria.
-This implementation successfully demonstrates the working of TOPSIS using Python.
+## 📤 Output File Format
+The output file is a CSV file containing:
+- **Topsis Score** – relative closeness to the ideal solution
+- **Rank** – ranking based on TOPSIS score
+
+Higher score indicates a better alternative.
+
+---
+
+##  Methodology (Brief)
+1. Read input data from CSV file
+2. Normalize the decision matrix
+3. Apply weights to the normalized matrix
+4. Determine ideal best and ideal worst values
+5. Calculate distance from ideal best and worst
+6. Compute TOPSIS score
+7. Rank alternatives based on the score
+
+---
+
+## Webserivce link
+[TOPSIS Web Service](http://127.0.0.1:5000)
+
+
+
+
+##  Conclusion
+This package provides a simple and effective way to perform TOPSIS analysis using Python.
+It is useful for decision-making problems involving multiple criteria.
+
+
+
+
+
+
+
+
+
