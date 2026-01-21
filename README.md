@@ -23,7 +23,9 @@ pip install TOPSIS-ANSHIKA-102303042
 ---
 
 ## Usage (Command Line)
+```bash
 topsis <InputDataFile> <Weights> <Impacts> <OutputResultFile>
+```
 
 ---
 
